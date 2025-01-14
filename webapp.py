@@ -12,11 +12,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Try to read existing CSV file or create new DataFrame
-#try:
-    #dados = pd.read_csv("compras.csv")
-#except:
-dados = pd.DataFrame({"produto": [], "preço": []})
-dados.to_csv("compras.csv", index=False)
+try:
+    dados = pd.read_csv("compras.csv")
+except:
+    dados = pd.DataFrame({"produto": [], "preço": []})
+    dados.to_csv("compras.csv", index=False)
 
 # Display title and input for budget
 st.title("Controlo de Gastos")
